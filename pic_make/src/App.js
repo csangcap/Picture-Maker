@@ -14,6 +14,40 @@ class App extends Component{
     }
   }
 
+  handleSourceChange(event) {
+    //get the current info
+    var pic_info = this.state.pic_info;
+
+    //get the modified value
+    var modVal = event.target.value;
+    
+    //set the state
+    pic_info.img_src = modVal;
+
+    this.setState({
+      pic_info: pic_info
+    }); 
+  }
+
+  handleQuoteChange(event) {
+    //get the current info
+    var pic_info = this.state.pic_info;
+
+    //get the modified value
+    var modVal = event.target.value;
+    
+    //set the state
+    pic_info.img_quote = modVal;
+
+    this.setState({
+      pic_info: pic_info
+    });
+  }
+
+  handleButtonClicked() {
+    console.log(this.state.pic_info);
+  }
+
   render() {
     return (
       <div className="App">
@@ -21,15 +55,15 @@ class App extends Component{
           <br/>
           <label>
             Link:
-            <input type="text" name="link" value={this.state.pic_info.img_src}/>
+            <input type="text" name="link" value={this.state.pic_info.img_src} onChange={this.handleSourceChange.bind(this)}/>
           </label>
           <br/>
           <label>
             Quote:
-            <input type="text" name="quote" value={this.state.pic_info.img_quote}/>
+            <input type="text" name="quote" value={this.state.pic_info.img_quote} onChange={this.handleQuoteChange.bind(this)}/>
           </label>
           <br/>
-          <input type="submit" value="Sumbit"/>
+          <button onClick={this.handleButtonClicked.bind(this)}>Console Log</button>
         </form>
       </div>
     );
