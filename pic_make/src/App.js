@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+//import React from 'React';
+import { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      pic_info: {
+        img_src: props.link,
+        img_quote: props.quote
+      }
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <form>
+          <br/>
+          <label>
+            Link:
+            <input type="text" name="link" value={this.state.pic_info.img_src}/>
+          </label>
+          <br/>
+          <label>
+            Quote:
+            <input type="text" name="quote" value={this.state.pic_info.img_quote}/>
+          </label>
+          <br/>
+          <input type="submit" value="Sumbit"/>
+        </form>
+      </div>
+    );
+  }
 }
 
 export default App;
