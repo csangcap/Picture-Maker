@@ -83,9 +83,6 @@ class App extends Component{
           </label>
           <br/>
         </form>
-        {/*<img src={this.state.pic_info.img_src} alt={this.state.pic_info.img_title} width="350" height="550"/>
-        <p>{this.state.pic_info.img_title}</p>*/}
-
         <br/>
 
         <div class="container">
@@ -96,7 +93,6 @@ class App extends Component{
             <h1>{this.state.pic_info.img_quote}</h1>
           </div>
         </div>
-
       </div>
     );
   }
