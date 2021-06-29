@@ -9,7 +9,8 @@ class App extends Component{
     this.state = {
       pic_info: {
         img_src: props.link,
-        img_quote: props.quote
+        img_quote: props.quote,
+        img_title: props.title
       }
     }
   }
@@ -20,6 +21,7 @@ class App extends Component{
 
     //get the modified value
     var modVal = event.target.value;
+    //console.log(modVal);
     
     //set the state
     pic_info.img_src = modVal;
@@ -44,8 +46,20 @@ class App extends Component{
     });
   }
 
-  handleButtonClicked() {
-    console.log(this.state.pic_info);
+  handleTitleChange(event) {
+    //get the current info
+    var pic_info = this.state.pic_info;
+
+    //get the modified value
+    var modVal = event.target.value;
+    console.log("Title",modVal);
+    
+    //set the state
+    pic_info.img_title = modVal;
+
+    this.setState({
+      pic_info: pic_info
+    });
   }
 
   render() {
@@ -55,7 +69,12 @@ class App extends Component{
           <br/>
           <label>
             Link:
-            <input type="text" name="link" value={this.state.pic_info.img_src} onChange={this.handleSourceChange.bind(this)}/>
+            <input type="url" name="link" value={this.state.pic_info.img_src} onChange={this.handleSourceChange.bind(this)}/>
+          </label>
+          <br/>
+          <label>
+            Book Title:
+            <input type="text" name="title" value={this.state.pic_info.img_title} onChange={this.handleTitleChange.bind(this)}/>
           </label>
           <br/>
           <label>
@@ -63,8 +82,21 @@ class App extends Component{
             <input type="text" name="quote" value={this.state.pic_info.img_quote} onChange={this.handleQuoteChange.bind(this)}/>
           </label>
           <br/>
-          <button onClick={this.handleButtonClicked.bind(this)}>Console Log</button>
         </form>
+        {/*<img src={this.state.pic_info.img_src} alt={this.state.pic_info.img_title} width="350" height="550"/>
+        <p>{this.state.pic_info.img_title}</p>*/}
+
+        <br/>
+
+        <div class="container">
+          <div class="image">
+            <img src={this.state.pic_info.img_src} alt={this.state.pic_info.img_title}/>
+          </div>
+          <div class="text">
+            <h1>{this.state.pic_info.img_quote}</h1>
+          </div>
+        </div>
+
       </div>
     );
   }
