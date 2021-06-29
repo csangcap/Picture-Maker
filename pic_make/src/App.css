@@ -40,18 +40,28 @@
 .container {
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  border: red solid 3px ;
+  width: 500px;
+  height: 500px;
 }
 
 img {
-  max-width: 100%
+  height: auto;
+  width: inherit;
 }
 
 .image {
-  flex-basis: 40%
+  border: black solid 4px;
+  margin: none;
 }
 
 .text {
-  font-size: 20px;
-  padding-left: 20px;
+  text-size-adjust: auto;
+  justify-content: center;
+  align-items: center;
+  border: solid black 3px;
+  margin: none;
+  max-width: inherit;
+  max-height: inherit;
 }
