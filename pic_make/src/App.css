@@ -47,21 +47,20 @@
 }
 
 img {
-  height: auto;
+  height: 500px;
   width: inherit;
 }
 
 .image {
-  border: black solid 4px;
   margin: none;
+  border: solid black 1px;
 }
 
 .text {
-  text-size-adjust: auto;
+  font-size-adjust: auto;
   justify-content: center;
   align-items: center;
   border: solid black 3px;
-  margin: none;
   max-width: inherit;
-  max-height: inherit;
+  max-height: 500px;
 }
