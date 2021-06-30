@@ -41,26 +41,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: red solid 3px ;
   width: 500px;
   height: 500px;
+  /*border: red solid 1px; took out the practice border*/
 }
 
-img {
+/*img {
   height: 500px;
   width: inherit;
-}
+}*/
 
 .image {
   margin: none;
-  border: solid black 1px;
+  /*border: solid black 1px; took out the practice border*/
+  float: left;
 }
 
 .text {
   font-size-adjust: auto;
   justify-content: center;
   align-items: center;
-  border: solid black 3px;
+  text-align: center;
+  display: flex;
+  /*border: solid black 1px; took out the practice border*/
   max-width: inherit;
-  max-height: 500px;
+  height: 500px;
 }
