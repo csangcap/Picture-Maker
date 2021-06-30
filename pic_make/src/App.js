@@ -10,7 +10,8 @@ class App extends Component{
       pic_info: {
         img_src: props.link,
         img_quote: props.quote,
-        img_title: props.title
+        img_title: props.title,
+        img_back: [],
       }
     }
   }
@@ -83,6 +84,12 @@ class App extends Component{
           </label>
           <br/>
         </form>
+        <br/>
+
+        <h2>Color picker:</h2>
+        Choose your first color: <input type="color" id="fc" name="color1"/>
+        <br/>
+        Choose your second color: <input type="color" id="sc" name="color2"/>
         <br/>
 
         <div class="container">
