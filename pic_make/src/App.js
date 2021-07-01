@@ -5,13 +5,12 @@ import './App.css';
 class App extends Component{
   constructor(props) {
     super(props);
-
     this.state = {
       pic_info: {
         img_src: props.link,
         img_quote: props.quote,
         img_title: props.title,
-        img_back: [],
+        img_bc1: props.backColor1,
       }
     }
   }
@@ -62,6 +61,21 @@ class App extends Component{
       pic_info: pic_info
     });
   }
+  handleBackChange(event) {
+    //get the current info
+    var pic_info = this.state.pic_info;
+
+    //get the modified value
+    var modVal = event.target.value;
+    //console.log("Title",modVal);
+    
+    //set the state
+    pic_info.img_bc1 = modVal;
+
+    this.setState({
+      pic_info: pic_info
+    });
+  }
 
   render() {
     return (
@@ -87,7 +101,7 @@ class App extends Component{
         <br/>
 
         <h2>Color picker:</h2>
-        Choose your first color: <input type="color" id="fc" name="color1"/>
+        Choose your first color: <input type="color" id="fc" name="color1" value={this.state.pic_info.img_bc1} onChange={this.handleBackChange.bind(this)}/>
         <br/>
         Choose your second color: <input type="color" id="sc" name="color2"/>
         <br/>
@@ -96,7 +110,9 @@ class App extends Component{
           <div class="image">
             <img src={this.state.pic_info.img_src} alt={this.state.pic_info.img_title}/>
           </div>
-          <div class="text">
+          <div class="text" style= {{
+            backgroundColor: this.state.pic_info.img_bc1
+          }}>
             <h1>{this.state.pic_info.img_quote}</h1>
           </div>
         </div>
