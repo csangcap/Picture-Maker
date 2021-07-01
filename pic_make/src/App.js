@@ -105,6 +105,7 @@ class App extends Component{
         <br/>
         Choose your second color: <input type="color" id="sc" name="color2"/>
         <br/>
+        <br/>
 
         <div class="container">
           <div class="image">

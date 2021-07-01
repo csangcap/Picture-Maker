@@ -38,11 +38,12 @@
 }
 
 .container {
-  display: flex;
+  display: center;
   align-items: center;
   justify-content: center;
   width: 500px;
   height: 500px;
+  margin: auto;
   /*border: red solid 1px; took out the practice border*/
 }
 
@@ -52,7 +53,7 @@ img {
 }
 
 .image {
-  margin: none;
+  margin: inherit;
   /*border: solid black 1px; took out the practice border*/
   float: left;
 }
