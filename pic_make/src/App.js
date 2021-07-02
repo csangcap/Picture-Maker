@@ -7,9 +7,9 @@ class App extends Component{
     super(props);
     this.state = {
       pic_info: {
-        img_src: props.link,
-        img_quote: props.quote,
-        img_title: props.title,
+        img_src: "",
+        img_quote: "",
+        img_title: "",
         img_bc1: props.backColor1,
       }
     }
@@ -98,7 +98,6 @@ class App extends Component{
           </label>
           <br/>
         </form>
-        <br/>
 
         <h2>Color picker:</h2>
         Choose your first color: <input type="color" id="fc" name="color1" value={this.state.pic_info.img_bc1} onChange={this.handleBackChange.bind(this)}/>
@@ -111,10 +110,8 @@ class App extends Component{
           <div class="image">
             <img src={this.state.pic_info.img_src} alt={this.state.pic_info.img_title}/>
           </div>
-          <div class="text" style= {{
-            backgroundColor: this.state.pic_info.img_bc1
-          }}>
-            <h1>{this.state.pic_info.img_quote}</h1>
+          <div class="text"style={{ background: "linear-gradient(red 0%, orange 20%, yellow 50%, green 75%, blue 100%)" }}>
+            <h1 >{this.state.pic_info.img_quote}</h1>
           </div>
         </div>
       </div>

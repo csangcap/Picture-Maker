@@ -67,4 +67,5 @@ img {
   /*border: solid black 1px; took out the practice border*/
   max-width: inherit;
   height: 500px;
+  /*background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);*/
 }
