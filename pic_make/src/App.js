@@ -97,14 +97,11 @@ class App extends Component{
             <input type="text" name="quote" value={this.state.pic_info.img_quote} onChange={this.handleQuoteChange.bind(this)}/>
           </label>
           <br/>
+          <label>
+            Number of colors:
+            <input type="number" name="colors" min="1" max="10"/>
+          </label>
         </form>
-
-        <h2>Color picker:</h2>
-        Choose your first color: <input type="color" id="fc" name="color1" value={this.state.pic_info.img_bc1} onChange={this.handleBackChange.bind(this)}/>
-        <br/>
-        Choose your second color: <input type="color" id="sc" name="color2"/>
-        <br/>
-        <br/>
 
         <div class="container">
           <div class="image">
