@@ -9,7 +9,8 @@ class App extends Component{
       img_link: "",
       book_title: "",
       book_quote: "",
-      n_colors: 0,
+      n_colors: 1, //default number of colors
+      colors: ['#ffffff'], //default color
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
