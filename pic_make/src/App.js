@@ -21,12 +21,13 @@ class App extends Component{
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
 
-    //console.log(target, name, value);
+    console.log(target, name, value);
 
     this.setState({
       [name]: value
     });
   }
+
 
   render() {
     return (
@@ -35,22 +36,44 @@ class App extends Component{
           <br/>
           <label>
             Link:
-            <input type="url" name="img_link" value={this.state.img_link} onChange={this.handleInputChange}/>
+            <input 
+              type="url" 
+              name="img_link" 
+              value={this.state.img_link} 
+              onChange={this.handleInputChange}
+            />
           </label>
           <br/>
           <label>
             Book Title:
-            <input type="text" name="book_title" value={this.state.book_title} onChange={this.handleInputChange}/>
+            <input 
+              type="text" 
+              name="book_title" 
+              value={this.state.book_title} 
+              onChange={this.handleInputChange}
+            />
           </label>
           <br/>
           <label>
             Quote:
-            <input type="text" name="book_quote" value={this.state.book_quote} onChange={this.handleInputChange}/>
+            <input 
+              type="text" 
+              name="book_quote" 
+              value={this.state.book_quote} 
+              onChange={this.handleInputChange}
+            />
           </label>
           <br/>
           <label>
             Number of colors:
-            <input type="number" name="n_colors" min="1" max="10" value={this.state.n_colors} onChange={this.handleInputChange}/>
+            <input 
+              type="number" 
+              name="n_colors" 
+              min="1" 
+              max="10" 
+              value={this.state.n_colors} 
+              onChange={this.handleInputChange}
+            />
           </label>
         </form>
 
